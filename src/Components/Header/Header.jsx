@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <nav className="nav container">
         <a href="" className="nav-logo ">
-          KEMO
+          Ahmed
         </a>
         <div className={toggle?"nav-menu show-menu":"nav-menu"}>
           <ul className="nav-list grid">
