@@ -58,7 +58,7 @@ function Data() {
       <h3 className="home-subtitle">Full Stack Web Developer</h3>
       <p className="home-description">I'm a Full Stack Web Developer, using ASP.NET for the backend and React.js for the frontend.</p>
       <a href="#contact" className="button button-flex">
-        Say Hello
+        Say Hello &nbsp;
         <svg
                   class="button__icon"
                   xmlns="http://www.w3.org/2000/svg"

@@ -21,7 +21,7 @@
   --normal-font-size:1rem;
   --small-font-size:0.875rem;
   --smaller-font-size:0.813rem;
-  --tiny-font-size:0625rem;
+  --tiny-font-size:0.625rem;
   /* font weight */
   --font-normal:400;
   --font-medium:500;
@@ -159,8 +159,15 @@ img{
   }
 }
 @media screen and (max-width:768px) {
+  body{
+    margin: 0 0 var(--header-height) 0;
+  }
   .section{
     padding: 2rem 0 4rem;
+  }
+  .section-subtitle{
+    padding: 2rem 0 4rem;
+
   }
 }@media screen and (max-width:572px) {
   
