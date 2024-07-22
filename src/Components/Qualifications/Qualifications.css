@@ -1,0 +1,111 @@
+.qualification-container {
+    max-width: 768px;
+}
+
+.qualification-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--mb-2);
+}
+
+.qualification-button {
+    font-size: var(--h3-font-size);
+    font-weight: var(--medium-font);
+    color: var(--title-color);
+    margin: 0 var(--mb-1);
+    cursor: pointer;
+}
+
+.qualification-button:hover {
+    color: var(--title-color-dark);
+}
+
+.qualification-icon {
+    font-size: 1.5rem;
+    margin-right: var(--mb-0-5);
+}
+
+.qualification-active {
+    color: var(--title-color-dark);
+}
+
+.qualification-sections {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    justify-content: center;
+}
+
+.qualification-content {
+    display: none;
+}
+
+.qualification-content-active {
+    display: block;
+}
+
+.qualification-data {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.qualification-title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.qualification-subtitle {
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.qualification-calendar {
+    font-size: var(--small-font-size);
+}
+
+.qualification-rounder {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    height: 13px;
+    width: 13px;
+}
+
+.qualification-line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--text-color);
+    transform: translate(6px, -7px);
+}
+
+
+@media screen and (max-width:992px) {
+    .qualification-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .qualification-container{
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+    }
+}
+
+@media screen and (max-width:572px) {
+    .qualification-sections{
+        grid-template-columns: initial;
+    }
+    .qualification-button{
+        margin: 0 var(--mb-0-75);
+    }
+}
+
+@media screen and (max-width:350px) {
+    .qualification-data{
+        gap: .5rem;
+    }
+}
