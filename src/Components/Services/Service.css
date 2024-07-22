@@ -1,5 +1,5 @@
 .services-container {
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(3, 230px);
     justify-content: center;
     column-gap: 3rem;
     
@@ -122,11 +122,16 @@
 /* breakpoints */
 @media screen and (max-width:992px) {
     .services-container {
-        grid-template-columns: repeat(2,250px);
+        grid-template-columns: repeat(3,220px);
         row-gap: 2rem;
     }
 }
-
+@media screen and (max-width:768px) {
+    .services-container {
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 2rem;
+    }
+}
 @media screen and (max-width:572px) {
     .services-container {
         grid-template-columns: 1fr;
