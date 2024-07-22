@@ -180,3 +180,23 @@ img{
     margin-right: var(--mb-1);
   }
 }
+
+
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--container-color);
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--title-color);
+  border-radius: 5px;
+}
+
+  ::-webkit-scrollbar-thumb:hover {
+      background: var(--title-color);
+  }
