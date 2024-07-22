@@ -53,7 +53,14 @@
         row-gap: 2rem;
     }
 }
-
+@media screen and (max-width:650px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    .skills-content{
+        padding: 1.5rem;
+    }
+}
 @media screen and (max-width:572px) {
     .skills-container {
         grid-template-columns: 1fr;
@@ -70,4 +77,8 @@
     .skill-name{
         font-size: var(--smaller-font-size);
     }
+}
+
+.front{
+    margin-bottom: var(--mb-1);
 }

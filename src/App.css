@@ -192,11 +192,8 @@ img{
 
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--title-color);
-  border-radius: 5px;
-}
+
 
   ::-webkit-scrollbar-thumb:hover {
-      background: var(--title-color);
+      background: var(--title-color-dark);
   }

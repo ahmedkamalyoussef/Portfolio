@@ -9,31 +9,27 @@ function Frontend() {
           <div className="skills-data">
             <i class="bx bx-badge-check"></i>
             <div>
-              <h3 className="skill-name">HTML</h3>
-              <br />
+              <h3 className="skill-name front">HTML</h3>
             </div>
           </div>
           <div className="skills-data">
             <i class="bx bx-badge-check"></i>
             <div>
-              <h3 className="skill-name">Css</h3>
-              <br />
+              <h3 className="skill-name front">Css</h3>
 
             </div>
           </div>
           <div className="skills-data">
             <i class="bx bx-badge-check"></i>
             <div>
-              <h3 className="skill-name">Sass</h3>
-              <br />
+              <h3 className="skill-name front">Sass</h3>
 
             </div>
           </div>
           <div className="skills-data">
             <i class="bx bx-badge-check"></i>
             <div>
-              <h3 className="skill-name">Tailwind</h3>
-              <br />
+              <h3 className="skill-name front">Tailwind</h3>
 
             </div>
           </div>
@@ -42,32 +38,28 @@ function Frontend() {
         <div className="skills-data">
             <i class="bx bx-badge-check"></i>
             <div>
-              <h3 className="skill-name">Bootstrap</h3>
-              <br />
+              <h3 className="skill-name front">Bootstrap</h3>
               
             </div>
           </div>
           <div className="skills-data">
             <i class="bx bx-badge-check"></i>
             <div>
-              <h3 className="skill-name">JavaScript</h3>
-              <br />
+              <h3 className="skill-name front">JavaScript</h3>
 
             </div>
           </div>
           <div className="skills-data">
             <i class="bx bx-badge-check"></i>
             <div>
-              <h3 className="skill-name">TypeScript</h3>
-              <br />
+              <h3 className="skill-name front">TypeScript</h3>
 
             </div>
           </div>
           <div className="skills-data">
             <i class="bx bx-badge-check"></i>
             <div>
-              <h3 className="skill-name">React.js</h3>
-              <br />
+              <h3 className="skill-name front">React.js</h3>
 
             </div>
           </div>
