@@ -2,7 +2,7 @@
     grid-template-columns: repeat(3, 230px);
     justify-content: center;
     column-gap: 3rem;
-    
+
 }
 
 .services-content {
@@ -122,33 +122,35 @@
 /* breakpoints */
 @media screen and (max-width:992px) {
     .services-container {
-        grid-template-columns: repeat(3,220px);
+        grid-template-columns: repeat(3, 220px);
         row-gap: 2rem;
     }
 }
+
 @media screen and (max-width:768px) {
     .services-container {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         row-gap: 2rem;
     }
 }
+
 @media screen and (max-width:572px) {
     .services-container {
         grid-template-columns: 1fr;
     }
-    .services-content{
+
+    .services-content {
         padding: 1.5rem;
     }
 
-    .service-modal-content{
+    .service-modal-content {
         margin: 1rem;
         padding: 4.5rem 1.5rem 2.5rem;
     }
-    .service-modal-description{
+
+    .service-modal-description {
         padding: 0;
     }
 }
 
-@media screen and (max-width:350px) {
-    
-}
+@media screen and (max-width:350px) {}

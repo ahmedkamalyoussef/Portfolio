@@ -82,30 +82,31 @@
 
 
 @media screen and (max-width:992px) {
-    .qualification-container{
+    .qualification-container {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media screen and (max-width:768px) {
-    .qualification-container{
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+    .qualification-container {
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
     }
 }
 
 @media screen and (max-width:572px) {
-    .qualification-sections{
+    .qualification-sections {
         grid-template-columns: initial;
     }
-    .qualification-button{
+
+    .qualification-button {
         margin: 0 var(--mb-0-75);
     }
 }
 
 @media screen and (max-width:350px) {
-    .qualification-data{
+    .qualification-data {
         gap: .5rem;
     }
 }

@@ -1,31 +1,47 @@
 import React, { useState } from "react";
 import "./Qualifications.css";
 function Qualifications() {
-    const [toggleActive,setToggleActive]=useState(1);
-    const toggleTab=(tab)=>{
-        setToggleActive(tab);
-    }
+  const [toggleActive, setToggleActive] = useState(1);
+  const toggleTab = (tab) => {
+    setToggleActive(tab);
+  };
   return (
     <section className="qualification section">
       <h2 className="section-title">Qualification</h2>
       <span className="section-subtitle">My Personal Journey</span>
       <div className="qualification-container container">
         <div className="qualification-tabs">
-          <div 
-          className={toggleActive===1?"qualification-button qualification-active button-flex":"qualification-button button-flex"}
-          onClick={()=>toggleTab(1)}>
+          <div
+            className={
+              toggleActive === 1
+                ? "qualification-button qualification-active button-flex"
+                : "qualification-button button-flex"
+            }
+            onClick={() => toggleTab(1)}
+          >
             <i className="uil uil-graduation-cap qualification-icon"></i>{" "}
             Education
           </div>
-          <div 
-          className={toggleActive===2?"qualification-button qualification-active button-flex":"qualification-button button-flex"}
-          onClick={()=>toggleTab(2)}>
+          <div
+            className={
+              toggleActive === 2
+                ? "qualification-button qualification-active button-flex"
+                : "qualification-button button-flex"
+            }
+            onClick={() => toggleTab(2)}
+          >
             <i className="uil uil-briefcase-alt qualification-icon"></i>{" "}
             Experience
           </div>
         </div>
         <div className="qualification-sections">
-          <div className={toggleActive===1?"qualification-content qualification-content-active":"qualification-content"}>
+          <div
+            className={
+              toggleActive === 1
+                ? "qualification-content qualification-content-active"
+                : "qualification-content"
+            }
+          >
             <div className="qualification-data">
               <div>
                 <h3 className="qualification-title">South Vally Unitversity</h3>
@@ -87,7 +103,13 @@ function Qualifications() {
               </div>
             </div>
           </div>
-          <div className={toggleActive===2?"qualification-content qualification-content-active":"qualification-content"}>
+          <div
+            className={
+              toggleActive === 2
+                ? "qualification-content qualification-content-active"
+                : "qualification-content"
+            }
+          >
             <div className="qualification-data">
               <div>
                 <h3 className="qualification-title">Instructor </h3>
