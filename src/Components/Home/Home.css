@@ -66,6 +66,7 @@
     justify-self: center;
     width: 300px;
     height: 300px;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     animation: profile-animation 6s ease-in-out infinite 1s;
 }
 
