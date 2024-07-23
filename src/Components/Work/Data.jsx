@@ -6,6 +6,7 @@ import lms from '../../assets/images/lms.png';
 import school from '../../assets/images/School.png';
 import spark from '../../assets/images/spark.png';
 import cash from '../../assets/images/DevExpress.png';
+import cima from '../../assets/images/cima.png';
 export const projectsData=[
     {
         id:1,
@@ -77,6 +78,15 @@ export const projectsData=[
         category:'Backend',
         gitHub:'https://github.com/KEMO414/Book4U-MVC-Project',
         demo:'http://book4u.runasp.net',
+        isHasDemo:true
+    },
+    {
+        id:9,
+        img:cima ,
+        title:'Cima',
+        category:'Frontend',
+        gitHub:'https://github.com/KEMO414/cima-project',
+        demo:'https://kemocima.netlify.app/',
         isHasDemo:true
     },
 ]
