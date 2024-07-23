@@ -171,3 +171,104 @@
             height: 22px;
         }
     }
+
+    .home-social-icon {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: opacity 0.5s, transform 0.5s;
+      }
+      
+      .home-social-icon:nth-child(1) {
+        animation: animate-icon 0.5s forwards;
+        animation-delay: 0.5s;
+      }
+      
+      .home-social-icon:nth-child(2) {
+        animation: animate-icon 0.5s forwards;
+        animation-delay: 1s;
+      }
+      
+      /* Add more nth-child selectors for each additional icon */
+      
+      @keyframes animate-icon {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+
+
+      .home-img {
+        opacity: 0;
+        transform: translateX(400px);
+        transition: opacity 0.1s,ease-in-out transform 1.5s;
+      }
+      
+      .home-img.animate {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      @keyframes comeFromAbove {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .home-data * {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.button {
+    animation: comeFromAbove 0.6s ease-out forwards;
+    animation-delay: 0s;
+}
+.button__icon{
+    animation: comeFromAbove 0.6s ease-out forwards;
+    animation-delay: 0s;
+}
+
+.home-description {
+  animation: comeFromAbove 0.6s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.home-subtitle {
+  animation: comeFromAbove 0.6s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.home-title {
+  animation: comeFromAbove 0.6s ease-out forwards;
+  animation-delay: 1.5s;
+}
+.button__icon {
+    animation: animate-icon 0.5s forwards;
+    animation-delay: 1.5s; /* adjust the delay as needed */
+  }
+  
+  @keyframes animate-icon {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .home-scroll {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: comeFromBottom .5s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes comeFromBottom {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
