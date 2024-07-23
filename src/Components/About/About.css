@@ -73,3 +73,28 @@
         grid-template-columns: repeat(2, 1fr);
     }
   }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate {
+    animation: slide-in-right 0.5s forwards;
+  }
+  
+  .animate-delay-1 {
+    animation-delay: 0.1s;
+  }
+  .animate-delay-2 {
+    animation-delay: 0.2s;
+  }
+  .animate-delay-3 {
+    animation-delay: 0.3s;
+  }
