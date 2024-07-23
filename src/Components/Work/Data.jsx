@@ -12,53 +12,53 @@ export const projectsData=[
         img: prolinkApi,
         title:'ProLink',
         category: 'Backend',
-        gitHub:'',
+        gitHub:'https://github.com/KEMO414/ProLink.api',
         demo:'',
-        isHasDemo:true
+        isHasDemo:false
     },
     {
         id:2,
         img: lms,
         title:'LMS',
         category: 'Backend',
-        gitHub:'',
+        gitHub:'https://github.com/KEMO414/LMS',
         demo:'',
-        isHasDemo:true
+        isHasDemo:false
     },
     {
         id:3,
         img:school ,
         title:'School',
         category: 'Backend',
-        gitHub:'',
+        gitHub:'https://github.com/KEMO414/School',
         demo:'',
-        isHasDemo:true
+        isHasDemo:false
     },
     {
         id:4,
         img:cash ,
         title:'Cashier',
         category:'Desktop' ,
-        gitHub:'',
+        gitHub:'https://github.com/KEMO414/DevExpress',
         demo:'',
-        isHasDemo:true
+        isHasDemo:false
     },
     {
         id:5,
         img: prolinkReact,
         title:'ProLink',
         category: 'Frontend',
-        gitHub:'',
+        gitHub:'https://github.com/KEMO414/Prolink-front',
         demo:'',
-        isHasDemo:true
+        isHasDemo:false
     },
     {
         id:6,
         img: learningShop,
         title:'Learning Shop',
         category: 'Frontend',
-        gitHub:'',
-        demo:'',
+        gitHub:'https://github.com/SABRY225/Learning-Shop',
+        demo:'https://dr-rabi3.github.io/Learing-Shop-Web-site-Project-/',
         isHasDemo:true
     },
     {
@@ -66,17 +66,17 @@ export const projectsData=[
         img: spark,
         title:'Spark',
         category:'Frontend',
-        gitHub:'',
+        gitHub:'https://github.com/Ahmed-Nadyy/Spark',
         demo:'',
-        isHasDemo:true
+        isHasDemo:false
     },
     {
         id:8,
         img:book4u ,
         title:'Book4U',
         category:'Backend',
-        gitHub:'',
-        demo:'',
+        gitHub:'https://github.com/KEMO414/Book4U-MVC-Project',
+        demo:'http://book4u.runasp.net',
         isHasDemo:true
     },
 ]

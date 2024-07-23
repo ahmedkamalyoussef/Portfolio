@@ -17,13 +17,13 @@ function Social() {
       >
         <i class="uil uil-linkedin-alt"></i>
       </a>
-      <a
+      {/* <a
         href="https://www.facebook.com/profile.php?id=100028844448220"
         className="home-social-icon"
         target="_blank"
       >
         <i class="uil uil-facebook-f"></i>
-      </a>
+      </a> */}
     </div>
   );
 }
