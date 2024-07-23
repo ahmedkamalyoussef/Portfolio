@@ -11,13 +11,13 @@ function About() {
         </h2>
         <span className="section-subtitle">My Introduction</span>
         <div className="about-container container grid">
-            <img src={aboutImge} alt="" className="about-img" />
+            <img src={aboutImge} alt="about" className="about-img" />
             <div className="about-data">
                 <Info/>
                 <p className="about-description">
                     I am a passionate Full Stack Developer with expertise in both front-end and back-end development. My technical skills encompass database management (SQL Server), front-end technologies (HTML5, CSS3, JavaScript, Bootstrap, Tailwind, React, Sass, TypeScript), and .NET backend frameworks (ASP.NET, LINQ, Entity Framework, MVC, API, Blazor). Proficient in multiple programming languages including C#, C++, C, and Python, I have a strong foundation in OOP, algorithms, data structures, and design patterns.
                 </p>
-                <a download="" href={CV} className="button button-flex">Download CV &nbsp;
+                <a download="" href={CV}  className="button button-flex">Download CV &nbsp;
                 <svg
                 class="button__icon"
                 xmlns="http://www.w3.org/2000/svg"

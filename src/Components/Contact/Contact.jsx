@@ -31,6 +31,7 @@ function Contact() {
               </span>
               <a
                 href="mailto:ahmedkamalyoussef4@gmail.com"
+                target="_blank"
                 className="contact-button"
               >
                 Write me{" "}
@@ -45,6 +46,7 @@ function Contact() {
               <a
                 href="https://api.whatsapp.com/send?phone=+201001462439&text=hello , more information"
                 className="contact-button"
+                target="_blank"
               >
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
@@ -55,9 +57,10 @@ function Contact() {
               <i className="bx bxl-messenger contact-card-icon"></i>
               <div className="contact-card-title">Messenger</div>
               <span className="contact-card-data">Ahmed Kamal</span>
-              <a href="" className="contact-button">
+              <a href="" className="contact-button" target="_blank">
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
+                
               </a>
             </div>
           </div>

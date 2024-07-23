@@ -11,7 +11,7 @@ function Header() {
         <div className={toggle?"nav-menu show-menu":"nav-menu"}>
           <ul className="nav-list grid">
             <li className="nav-item">
-              <a href="#home" className="nav-link">
+              <a href="#home" className="nav-link" >
                 <i className="uil uil-estate nav-icon active-link"></i> Home
               </a>
             </li>

@@ -9,7 +9,7 @@
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .nav{
-    height: calc(var(--header-height)+1.5rem);
+    height: 19px;
     display: flex;
     justify-content: space-between;
     align-items: center;
