@@ -8,8 +8,8 @@ function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm(process.env.serviceId, process.env.emailtemplate, form.current, {
-        publicKey: process.env.policykey,
+      .sendForm('service_iik776g', 'template_bnf77pn', form.current, {
+        publicKey: 'ew7Q7ippcfXG7lU7V',
       })
       e.target.reset();
   };

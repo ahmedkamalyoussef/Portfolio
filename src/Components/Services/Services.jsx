@@ -11,13 +11,13 @@ function Services() {
       <span className="section-subtitle">What I Offer</span>
       <div className="services-container container grid">
         <div className="services-content">
-          <div>
+          <div className="service-content-div" onClick={() => toggleTab(1)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
               Backend <br /> Developer
             </h3>
           </div>
-          <span className="service-button" onClick={() => toggleTab(1)}>
+          <span className="service-button">
             Show More{" "}
             <i className="uil uil-arrow-right service-button-icon"></i>
           </span>
@@ -66,8 +66,8 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="services-content">
-          <div>
+        <div className="services-content" >
+          <div className="service-content-div" onClick={() => toggleTab(2)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
               Frontend
@@ -75,7 +75,7 @@ function Services() {
               Developer
             </h3>
           </div>
-          <span className="service-button" onClick={() => toggleTab(2)}>
+          <span className="service-button" >
             Show More{" "}
             <i className="uil uil-arrow-right service-button-icon"></i>
           </span>
@@ -122,8 +122,8 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="services-content">
-          <div>
+        <div className="services-content" >
+          <div className="service-content-div" onClick={() => toggleTab(2)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
               Desktop
@@ -131,7 +131,7 @@ function Services() {
               Application
             </h3>
           </div>
-          <span className="service-button" onClick={() => toggleTab(2)}>
+          <span className="service-button" >
             Show More{" "}
             <i className="uil uil-arrow-right service-button-icon"></i>
           </span>
