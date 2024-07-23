@@ -5,6 +5,8 @@
     left:0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .nav{
     height: calc(var(--header-height)+1.5rem);
@@ -46,6 +48,7 @@
     .header{
         top: initial;
         bottom: 0;
+        padding: 0;
     }
     .nav{
         height: var(--header-height);

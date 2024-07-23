@@ -21,7 +21,7 @@ function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="Skills" className="nav-link">
+              <a href="#skills" className="nav-link">
                 <i className="uil uil-file-alt nav-icon"></i> Skills
               </a>
             </li>

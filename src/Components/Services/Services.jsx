@@ -36,37 +36,47 @@ function Services() {
               ></i>
               <h3 className="service-modal-title">Backend</h3>
               <p className="service-modal-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatem deserunt dicta beatae accusantium vero, eligendi quo
-                consequatur minus, iusto maiores repellat qui totam a! Ducimus
-                ea repudiandae temporibus quisquam repellat!
+                As a backend developer, I build the server-side logic, database
+                integration, and API connectivity for web applications. I focus
+                on creating scalable, secure, and efficient server-side
+                architecture.
               </p>
               <ul className="service-modal-services grid">
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">one</p>
+                  <p className="service-modal-info">
+                    API Design and Development
+                  </p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">two</p>
+                  <p className="service-modal-info">
+                    Custom Web Application Development
+                  </p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">three</p>
+                  <p className="service-modal-info">
+                    Database Design and Integration
+                  </p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">four</p>
+                  <p className="service-modal-info">
+                    Server-Side Logic Development
+                  </p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">five</p>
+                  <p className="service-modal-info">
+                    Real-Time Web Functionality
+                  </p>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="services-content" >
+        <div className="services-content">
           <div className="service-content-div" onClick={() => toggleTab(2)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
@@ -75,7 +85,7 @@ function Services() {
               Developer
             </h3>
           </div>
-          <span className="service-button" >
+          <span className="service-button">
             Show More{" "}
             <i className="uil uil-arrow-right service-button-icon"></i>
           </span>
@@ -94,36 +104,42 @@ function Services() {
               ></i>
               <h3 className="service-modal-title">Frontend</h3>
               <p className="service-modal-description">
-                Lorem ipsum dolor sit amet , eligendi quo consequatur minus
-                repudiandae temporibus quisquam repellat!
+                As a frontend developer, I create user interfaces and user
+                experiences for web applications using my skills. I focus on
+                building responsive, interactive, and visually appealing
+                interfaces that provide a seamless user experience.
               </p>
               <ul className="service-modal-services grid">
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">one</p>
+                  <p className="service-modal-info">Custom UI/UX Design</p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">two</p>
+                  <p className="service-modal-info">
+                    Responsive Web Development
+                  </p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">three</p>
+                  <p className="service-modal-info">Interactive Web Pages</p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">four</p>
+                  <p className="service-modal-info">
+                    Web Application Development
+                  </p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">five</p>
+                  <p className="service-modal-info">Frontend Optimization</p>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="services-content" >
-          <div className="service-content-div" onClick={() => toggleTab(2)}>
+        <div className="services-content">
+          <div className="service-content-div" onClick={() => toggleTab(3)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
               Desktop
@@ -131,14 +147,14 @@ function Services() {
               Application
             </h3>
           </div>
-          <span className="service-button" >
+          <span className="service-button">
             Show More{" "}
             <i className="uil uil-arrow-right service-button-icon"></i>
           </span>
 
           <div
             className={
-              toggleActive === 2
+              toggleActive === 3
                 ? "service-modal active-modal"
                 : "service-modal"
             }
@@ -148,31 +164,30 @@ function Services() {
                 className="uil uil-times service-modal-close"
                 onClick={() => toggleTab(0)}
               ></i>
-              <h3 className="service-modal-title">Frontend</h3>
+              <h3 className="service-modal-title">Desktop Application</h3>
               <p className="service-modal-description">
-                Lorem ipsum dolor sit amet , eligendi quo consequatur minus
-                repudiandae temporibus quisquam repellat!
+              As a desktop application developer, I design and develop desktop applications using C#. I focus on building robust, efficient, and user-friendly applications that meet specific business needs.
               </p>
               <ul className="service-modal-services grid">
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">one</p>
+                  <p className="service-modal-info">Custom Desktop Application Development</p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">two</p>
+                  <p className="service-modal-info">Windows Forms Development</p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">three</p>
+                  <p className="service-modal-info">WPF Application Development</p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">four</p>
+                  <p className="service-modal-info">Desktop Application Optimization</p>
                 </li>
                 <li className="service-modal-service">
                   <i className="uil uil-check-circle service-modal-icon"></i>
-                  <p className="service-modal-info">five</p>
+                  <p className="service-modal-info">Desktop Application Maintenance</p>
                 </li>
               </ul>
             </div>
