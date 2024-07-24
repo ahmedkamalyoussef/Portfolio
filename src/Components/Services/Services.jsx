@@ -30,14 +30,14 @@ function Services() {
       <h2 className="section-title">Services</h2>
       <span className="section-subtitle">What I Offer</span>
       <div className="services-container container grid">
-        <div className={isScrolled?"services-content-animate animate-delay-1":"services-content"}>
-          <div className="service-content-div" onClick={() => toggleTab(1)}>
+        <div className={isScrolled?"services-content-animate animate-delay-1":"services-content"} onClick={() => toggleTab(1)}>
+          <div className="service-content-div" >
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
               Backend <br /> Developer
             </h3>
           </div>
-          <span className="service-button">
+          <span className="service-button" onClick={() => toggleTab(1)}>
             Show More{" "}
             <i className="uil uil-arrow-right service-button-icon"></i>
           </span>
@@ -96,8 +96,8 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className={isScrolled?"services-content-animate animate-delay-2":"services-content"}>
-          <div className="service-content-div" onClick={() => toggleTab(2)}>
+        <div className={isScrolled?"services-content-animate animate-delay-2":"services-content"} onClick={() => toggleTab(2)}>
+          <div className="service-content-div" >
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
               Frontend
@@ -105,7 +105,7 @@ function Services() {
               Developer
             </h3>
           </div>
-          <span className="service-button">
+          <span className="service-button" onClick={() => toggleTab(2)}>
             Show More{" "}
             <i className="uil uil-arrow-right service-button-icon"></i>
           </span>
@@ -158,8 +158,8 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className={isScrolled?"services-content-animate animate-delay-3":"services-content"}>
-          <div className="service-content-div" onClick={() => toggleTab(3)}>
+        <div className={isScrolled?"services-content-animate animate-delay-3":"services-content"} onClick={() => toggleTab(3)}>
+          <div className="service-content-div" >
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
               Desktop
@@ -167,7 +167,7 @@ function Services() {
               Application
             </h3>
           </div>
-          <span className="service-button">
+          <span className="service-button" onClick={() => toggleTab(3)}>
             Show More{" "}
             <i className="uil uil-arrow-right service-button-icon"></i>
           </span>
