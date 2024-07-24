@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+  import React, { useState,useEffect } from "react";
 import "./Service.css";
 function Services() {
   const [toggleActive, setToggleActive] = useState(0);

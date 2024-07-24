@@ -31,6 +31,11 @@ function Header() {
               </a>
             </li>
             <li className="nav-item">
+              <a href="#qualification" className="nav-link" onClick={()=>showMenu(!toggle)}>
+                <i className="uil uil-scenery nav-icon"></i> Qualification
+              </a>
+            </li>
+            <li className="nav-item">
               <a href="#portfolio" className="nav-link" onClick={()=>showMenu(!toggle)}>
                 <i className="uil uil-scenery nav-icon"></i> Portfolio
               </a>

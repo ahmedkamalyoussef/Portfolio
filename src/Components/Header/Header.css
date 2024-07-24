@@ -6,7 +6,7 @@
     z-index: var(--z-fixed);
     background-color: var(--body-color);
     padding: 1rem;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid var(--border-color);
 }
 .nav{
     height: 19px;

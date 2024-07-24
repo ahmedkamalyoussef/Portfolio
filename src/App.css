@@ -10,6 +10,7 @@
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
+  --border-color:rgba(0,0,0,0.1);
   --container-color: #fff;
   /* font */
   --body-font: "Poppins", sans-serif;
@@ -231,10 +232,11 @@ img {
 
 .from-left {
   transform: translateX(-500%);
-
+  visibility: hidden;
 }
 .from-right {
   transform: translateX(500%);
+  visibility: hidden;
 }
 @keyframes slide-in-right {
   from {
@@ -242,6 +244,7 @@ img {
     opacity: 0;
   }
   to {
+    visibility: visible;
     transform: translateX(0);
     opacity: 1;
   }
@@ -252,6 +255,7 @@ img {
     opacity: 0;
   }
   to {
+    visibility: visible;
     transform: translateX(0);
     opacity: 1;
   }
