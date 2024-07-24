@@ -27,6 +27,7 @@ function Footer() {
             href="https://www.instagram.com/ahmed_kamal414/"
             className="footer-social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="bx bxl-instagram"></i>
           </a>
@@ -34,6 +35,7 @@ function Footer() {
             href="https://www.linkedin.com/in/ahmedkamal414?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bl%2FmWZtLTQjiEWdiUhjgwdA%3D%3D"
             className="footer-social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="bx bxl-linkedin"></i>
           </a>
@@ -41,6 +43,7 @@ function Footer() {
             href="https://www.facebook.com/profile.php?id=100028844448220"
             className="footer-social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="bx bxl-facebook"></i>
           </a>

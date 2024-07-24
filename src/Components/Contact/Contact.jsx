@@ -50,6 +50,7 @@ function Contact() {
                 href="mailto:ahmedkamalyoussef4@gmail.com"
                 target="_blank"
                 className="contact-button"
+                rel="noreferrer"
               >
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
@@ -64,6 +65,7 @@ function Contact() {
                 href="https://api.whatsapp.com/send?phone=+201001462439&text=hello , more information"
                 className="contact-button"
                 target="_blank"
+                rel="noreferrer"
               >
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
@@ -74,7 +76,7 @@ function Contact() {
               <i className="bx bxl-messenger contact-card-icon"></i>
               <div className="contact-card-title">Messenger</div>
               <span className="contact-card-data">Ahmed Kamal</span>
-              <a href="https://m.me/100028844448220" className="contact-button" target="_blank" rel="noopener noreferrer">
+              <a href="https://m.me/100028844448220" className="contact-button" target="_blank" rel="noreferrer">
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
                 
