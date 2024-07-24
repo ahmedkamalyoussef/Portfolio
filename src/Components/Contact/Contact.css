@@ -22,6 +22,8 @@
     padding: 1rem;
     border-radius: 0.75rem;
     text-align: center;
+    transform: translateX(500%);
+    visibility: hidden;
 }
 .contact-card-icon{
     font-size: 1.5rem;
@@ -64,6 +66,8 @@
     position: relative;
     margin-bottom: 1.6rem;
     height: 4rem;
+    transform: translateX(500%);
+    visibility: hidden;
 }
 .contact-form-input{
     position: absolute;

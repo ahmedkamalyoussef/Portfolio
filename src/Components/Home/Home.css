@@ -262,7 +262,7 @@
     transform: translateY(-500%);
     opacity: 0;
     animation: animate-icon 0.5s forwards;
-    animation-delay: 1.5s;
+    animation-delay: 0s;
     /* adjust the delay as needed */
 }
 @keyframes animate-icon {

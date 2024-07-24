@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState,useEffect,useRef } from "react";
 import emailjs from '@emailjs/browser';
 import './Contact.css'
 function Contact() {
@@ -14,6 +14,23 @@ function Contact() {
       e.target.reset();
   };
 
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 4400) {
+        setIsScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section className="section contact" id="contact">
       <h2 className="section-title">Get in touch</h2>
@@ -23,7 +40,7 @@ function Contact() {
           <h3 className="contact-title">Contact Me</h3>
           <div className="contact-info">
             {/* ------------------------- */}
-            <div className="contact-card">
+            <div className={isScrolled?"contact-card animate-delay-left-1 ":"contact-card"}>
               <i className="bx bx-mail-send contact-card-icon"></i>
               <div className="contact-card-title">Email</div>
               <span className="contact-card-data">
@@ -39,7 +56,7 @@ function Contact() {
               </a>
             </div>
             {/* ------------------------- */}
-            <div className="contact-card">
+            <div className={isScrolled?"contact-card animate-delay-left-2 ":"contact-card"}>
               <i className="bx bxl-whatsapp contact-card-icon"></i>
               <div className="contact-card-title">Whatsapp</div>
               <span className="contact-card-data">+201001462439</span>
@@ -53,11 +70,11 @@ function Contact() {
               </a>
             </div>
             {/* ------------------------- */}
-            <div className="contact-card">
+            <div className={isScrolled?"contact-card animate-delay-left-3 ":"contact-card"}>
               <i className="bx bxl-messenger contact-card-icon"></i>
               <div className="contact-card-title">Messenger</div>
               <span className="contact-card-data">Ahmed Kamal</span>
-              <a href="" className="contact-button" target="_blank">
+              <a href="https://m.me/100028844448220" className="contact-button" target="_blank" rel="noopener noreferrer">
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
                 
@@ -68,7 +85,7 @@ function Contact() {
         <div className="contact-content">
           <h3 className="contact-title">Write me your project</h3>
           <form ref={form} onSubmit={sendEmail} className="contact-form">
-            <div className="contact-form-div ">
+            <div className={isScrolled?"contact-form-div animate-delay-1 ":"contact-form-div"}>
               <lable className="contact-form-tag">Name</lable>
               <input
                 type="text"
@@ -77,7 +94,7 @@ function Contact() {
                 placeholder="Insert your name"
               />
             </div>
-            <div className="contact-form-div">
+            <div className={isScrolled?"contact-form-div animate-delay-2 "  :"contact-form-div"}>
               <lable className="contact-form-tag">Email</lable>
               <input
                 type="email"
@@ -86,7 +103,7 @@ function Contact() {
                 placeholder="Insert your Mail"
               />
             </div>
-            <div className="contact-form-div contact-form-area">
+            <div className={isScrolled?"contact-form-div contact-form-area animate-delay-3 ":"contact-form-div "}>
               <lable className="contact-form-tag">Project</lable>
               <textarea
                 name="project"
