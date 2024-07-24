@@ -9,7 +9,7 @@ function Qualifications() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 2050) {
+      if (window.scrollY > 2150) {
         setIsScrolled(true);
       }
     };

@@ -1,29 +1,55 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 function Social() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+      document.body.classList.add("dark-theme");
+      setDarkMode(true);
+    } else {
+      document.body.classList.add("light-theme");
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (!darkMode) {
+      document.body.classList.add("dark-theme");
+      document.body.classList.remove("light-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.add("light-theme");
+      document.body.classList.remove("dark-theme");
+      localStorage.setItem("theme", "light");
+    }
+  };
+
   return (
     <div className="home-social">
+      <button onClick={toggleDarkMode} className="dark-mode-toggle home-social-icon sun-button">
+        {darkMode ? (
+          <i className="uil uil-sun home-social-icon"></i>
+        ) : (
+          <i className="uil uil-moon home-social-icon"></i>
+        )}
+      </button>
       <a
         href="https://github.com/KEMO414"
         className="home-social-icon"
         target="_blank"
+        rel="noopener noreferrer"
       >
-        <i class="uil uil-github-alt"></i>
+        <i className="uil uil-github-alt"></i>
       </a>
       <a
-        href="https://www.linkedin.com/in/ahmedkamal414?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bl%2FmWZtLTQjiEWdiUhjgwdA%3D%3D"
+        href="https://www.linkedin.com/in/ahmedkamal414"
         className="home-social-icon"
         target="_blank"
+        rel="noopener noreferrer"
       >
-        <i class="uil uil-linkedin-alt"></i>
+        <i className="uil uil-linkedin-alt"></i>
       </a>
-      {/* <a
-        href="https://www.facebook.com/profile.php?id=100028844448220"
-        className="home-social-icon"
-        target="_blank"
-      >
-        <i class="uil uil-facebook-f"></i>
-      </a> */}
     </div>
   );
 }

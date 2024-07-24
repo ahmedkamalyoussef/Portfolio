@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-
   --header-height: 3rem;
-  /* colors */
   --hue: 0;
   --sat: 0%;
   --title-color: hsl(var(--hue), var(--sat), 25%);
@@ -14,9 +12,16 @@
   --border-color-2: rgba(0, 0, 0, 0.2);
   --border-color-3: rgba(0, 0, 0, 0.3);
   --container-color: #fff;
-  /* font */
+  --second-theme-title-color: #dddada;
+  --second-theme-title-color-dark: #e4e4e4ef;
+  --second-theme-text-color: #f0f0f0f9;
+  --second-theme-body-color: #0f0f0f;
+  --second-theme-border-color: rgba(255, 255, 255, 0.4);
+  --second-theme-border-color-2: rgba(255, 255, 255, 0.5);
+  --second-theme-border-color-3: rgba(255, 255, 255, 0.6);
+  --second-theme-container-color: #161616;
+  --sun-color:#d5c406;
   --body-font: "Poppins", sans-serif;
-  /* fontsize */
   --bg-font-size: 3.5rem;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
@@ -25,11 +30,9 @@
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.813rem;
   --tiny-font-size: 0.625rem;
-  /* font weight */
   --font-normal: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
-  /* margin bottoms */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -38,7 +41,6 @@
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
-  /* z-index */
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
@@ -79,7 +81,6 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
-  /* overflow: hidden; */
 }
 
 main {
@@ -165,6 +166,7 @@ img {
   display: inline-flex;
   align-items: center;
 }
+
 /* breakpoints */
 @media screen and (max-width:992px) {
   .container {
@@ -206,7 +208,6 @@ img {
 }
 ::-webkit-scrollbar-track {
   background: var(--container-color);
-
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--title-color-dark);
@@ -277,4 +278,29 @@ img {
 .animate-delay-left-3 {
   animation: slide-in-left 0.5s forwards;
   animation-delay: 0.9s;
+}
+
+/* Dark mode styles */
+body.dark-theme {
+  --title-color: var(--second-theme-title-color);
+  --title-color-dark: var(--second-theme-title-color-dark);
+  --text-color: var(--second-theme-text-color);
+  --body-color: var(--second-theme-body-color);
+  --border-color: var(--second-theme-border-color);
+  --border-color-2: var(--second-theme-border-color-2);
+  --border-color-3: var(--second-theme-border-color-3);
+  --container-color: var(--second-theme-container-color);
+  --sun-color:var(--sun-color);
+}
+
+body.light-theme {
+  --title-color: hsl(var(--hue), var(--sat), 25%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-color-2: rgba(0, 0, 0, 0.2);
+  --border-color-3: rgba(0, 0, 0, 0.3);
+  --container-color: #fff;
+  --sun-color:#d5c406;
 }
