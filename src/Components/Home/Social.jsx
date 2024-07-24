@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
+
 function Social() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "dark") {
-      document.body.classList.add("dark-theme");
-      setDarkMode(true);
+    if (currentTheme) {
+      setDarkMode(currentTheme === "dark");
+      document.body.classList.add(currentTheme === "dark" ? "dark-theme" : "light-theme");
     } else {
-      document.body.classList.add("light-theme");
+      const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setDarkMode(prefersDarkMode);
+      document.body.classList.add(prefersDarkMode ? "dark-theme" : "light-theme");
     }
   }, []);
 
@@ -27,7 +30,11 @@ function Social() {
 
   return (
     <div className="home-social">
-      <button onClick={toggleDarkMode} className="dark-mode-toggle home-social-icon sun-button">
+      <button
+        onClick={toggleDarkMode}
+        className="dark-mode-toggle home-social-icon sun-button"
+        style={{ color: darkMode ? "#FFD700" : "inherit" }}
+      >
         {darkMode ? (
           <i className="uil uil-sun home-social-icon"></i>
         ) : (
