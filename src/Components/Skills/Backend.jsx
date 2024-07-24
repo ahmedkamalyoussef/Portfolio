@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
 function Backend() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1280) {
+        setIsScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="skills-content">
+    <div className={isScrolled?"skills-content from-right-scroll from-right":"skills-content from-right"}>
       <h3 className="skills-title">Backend Developer</h3>
       <div className="skills-box">
         <div className="skills-group">

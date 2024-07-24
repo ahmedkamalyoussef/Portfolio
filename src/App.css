@@ -225,3 +225,58 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--title-color-dark);
 }
+
+
+
+
+.from-left {
+  transform: translateX(-500%);
+
+}
+.from-right {
+  transform: translateX(500%);
+}
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.from-left-scroll {
+  animation: slide-in-left 0.9s forwards;
+  animation-delay: 0.1s;
+}
+.from-right-scroll {
+  animation: slide-in-right 0.9s forwards;
+  animation-delay: 0.1s;
+}
+
+.animate-delay-1 {
+  animation: slide-in-right 0.5s forwards;
+  animation-delay: 0.1s;
+}
+
+.animate-delay-2 {
+  animation: slide-in-right 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
+.animate-delay-3 {
+  animation: slide-in-right 0.5s forwards;
+  animation-delay: 0.7s;
+}

@@ -1,16 +1,32 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Service.css";
 function Services() {
   const [toggleActive, setToggleActive] = useState(0);
   const toggleTab = (tab) => {
     setToggleActive(tab);
   };
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1750) {
+        setIsScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section className="section services" id="services">
       <h2 className="section-title">Services</h2>
       <span className="section-subtitle">What I Offer</span>
       <div className="services-container container grid">
-        <div className="services-content">
+        <div className={isScrolled?"services-content animate-delay-1":"services-content"}>
           <div className="service-content-div" onClick={() => toggleTab(1)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
@@ -76,7 +92,7 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="services-content">
+        <div className={isScrolled?"services-content animate-delay-2":"services-content"}>
           <div className="service-content-div" onClick={() => toggleTab(2)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
@@ -138,7 +154,7 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="services-content">
+        <div className={isScrolled?"services-content animate-delay-3":"services-content"}>
           <div className="service-content-div" onClick={() => toggleTab(3)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
