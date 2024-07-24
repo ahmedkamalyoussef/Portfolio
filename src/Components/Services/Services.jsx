@@ -6,11 +6,15 @@ function Services() {
     setToggleActive(tab);
   };
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const [check, setCheck] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1750) {
+      if (window.scrollY > 1750&&check===false) {
         setIsScrolled(true);
+        setCheck(true);
+        setTimeout(() => {
+          setIsScrolled(false);
+        }, 1500);
       }
     };
 
@@ -26,7 +30,7 @@ function Services() {
       <h2 className="section-title">Services</h2>
       <span className="section-subtitle">What I Offer</span>
       <div className="services-container container grid">
-        <div className={isScrolled?"services-content animate-delay-1":"services-content"}>
+        <div className={isScrolled?"services-content-animate animate-delay-1":"services-content"}>
           <div className="service-content-div" onClick={() => toggleTab(1)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
@@ -92,7 +96,7 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className={isScrolled?"services-content animate-delay-2":"services-content"}>
+        <div className={isScrolled?"services-content-animate animate-delay-2":"services-content"}>
           <div className="service-content-div" onClick={() => toggleTab(2)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">
@@ -154,7 +158,7 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className={isScrolled?"services-content animate-delay-3":"services-content"}>
+        <div className={isScrolled?"services-content-animate animate-delay-3":"services-content"}>
           <div className="service-content-div" onClick={() => toggleTab(3)}>
             <i className="uil uil-arrow service-icon"></i>
             <h3 className="service-title">

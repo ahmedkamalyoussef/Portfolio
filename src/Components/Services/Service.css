@@ -11,6 +11,13 @@
     border: 1px solid var(--border-color);
     padding: 1.8rem 0 2rem 2.5rem;
     border-radius: 1.25rem;
+}
+.services-content-animate {
+    position: relative;
+    background-color: var(--container-color);
+    border: 1px solid var(--border-color);
+    padding: 1.8rem 0 2rem 2.5rem;
+    border-radius: 1.25rem;
     transform: translateX(500%);
 }
 
