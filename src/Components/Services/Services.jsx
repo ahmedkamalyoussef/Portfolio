@@ -23,7 +23,7 @@ function Services() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [check]);
 
   return (
     <section className="section services" id="services">
