@@ -1,6 +1,6 @@
 .footer{
     background-color: var(--container-color);
-    border-top: 1px solid rgba(0,0,0,0.2);
+    border-top: 1px solid var(--border-color-2);
 }
 .footer-container{
     padding: 1rem 0 4rem;

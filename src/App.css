@@ -11,6 +11,8 @@
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --border-color:rgba(0,0,0,0.1);
+  --border-color-2:rgba(0,0,0,0.2);
+  --border-color-3:rgba(0,0,0,0.3);
   --container-color: #fff;
   /* font */
   --body-font: "Poppins", sans-serif;
