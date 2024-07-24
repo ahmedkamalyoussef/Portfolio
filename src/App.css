@@ -76,8 +76,11 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  /* overflow: hidden; */
 }
-
+main{
+  overflow-x: hidden;
+}
 h1,
 h2,
 h3 {

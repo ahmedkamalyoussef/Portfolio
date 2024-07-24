@@ -1,100 +1,136 @@
-.about-container{
-    grid-template-columns: repeat(2 ,1fr);
-    align-items: center;
-    column-gap: 4rem;
-}
-.about-img{
-    width: 345px;
-    border-radius: 1.5rem;
-    justify-self: center;
-}
-.about-info{
-    grid-template-columns: repeat(3,140px);
-    gap: .5rem;
-    margin-bottom: var(--mb-2);
+.about-container {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 4rem;
 }
 
-.about-box{
-    background-color: var(--container-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.75rem;
-    text-align: center;
-    padding: 1rem 1.25rem;
+.about-img {
+  width: 345px;
+  border-radius: 1.5rem;
+  justify-self: center;
+  transform: translateX(500%);
 }
-.about-icon{
-    font-size: 1.5rem;
-    color: var(--title-color);
-    margin-bottom: var(--mb-0-5);
+
+.about-info {
+  grid-template-columns: repeat(3, 140px);
+  gap: .5rem;
+  margin-bottom: var(--mb-2);
 }
-.about-title{
-    font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
+
+.about-box {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  transform: translateX(500%);
 }
-.about-subtitle{
-    font-size: var(--smaller-font-size);
+
+.about-icon {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
 }
-.about-description{
-    padding: 0 4rem 0 0;
-    margin-bottom: var(--mb-2);
+
+.about-title {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.about-subtitle {
+  font-size: var(--smaller-font-size);
+}
+
+.about-description {
+  padding: 0 4rem 0 0;
+  margin-bottom: var(--mb-2);
 }
 
 /* breakpoints */
-@media screen and (max-width:992px) {
-    .about-container{
-        grid-template-columns: 1fr;
-        row-gap: 2.5rem;
-    }
-    .about-img{
-        width: 220px;
-    }
-    .about-box{
-        padding: 0.75rem 0.5rem;
-    }
-    .about-data{
-        text-align: center;
-    }
-    .about-info{
-        justify-content: center;
-    }
-    .about-description{
-        padding: 0 5rem;
-        margin-bottom: 2rem;
-    }
-  }
-    @media screen and (max-width:572px) {
-        .about-info{
-            grid-template-columns: repeat(3, 1fr);
-        }
-        .about-description{
-            padding: 0;
-        }
-  }@media screen and (max-width:350px) {
-    .about-info{
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media screen and (max-width: 992px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
   }
 
-  @keyframes slide-in-right {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  .about-img {
+    width: 220px;
+    
+  }
+
+  .about-box {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .about-data {
+    text-align: center;
+  }
+
+  .about-info {
+    justify-content: center;
+  }
+
+  .about-description {
+    padding: 0 5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .about-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-description {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .about-info {
+    grid-template-columns: repeat(2, 1fr);
   }
   
-  .animate {
-    animation: slide-in-right 0.5s forwards;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
   }
-  
-  .animate-delay-1 {
-    animation-delay: 0.1s;
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  .animate-delay-2 {
-    animation-delay: 0.2s;
+}
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  .animate-delay-3 {
-    animation-delay: 0.3s;
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
+}
+
+.animate-delay-1 {
+  animation: slide-in-right 0.5s forwards;
+  animation-delay: 0.1s;
+}
+
+.animate-delay-2 {
+  animation: slide-in-right 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
+.animate-delay-3 {
+  animation: slide-in-right 0.5s forwards;
+  animation-delay: 0.7s;
+}
+
+
+.animate-image {
+  animation: slide-in-left 0.9s forwards;
+  animation-delay: 0.5s;
+}
