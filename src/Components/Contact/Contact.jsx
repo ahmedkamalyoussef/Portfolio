@@ -1,21 +1,31 @@
-import React, { useState,useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import emailjs from '@emailjs/browser';
-import './Contact.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './Contact.css';
+
 function Contact() {
-    const form = useRef();
+  const form = useRef();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm('service_iik776g', 'template_bnf77pn', form.current, {
-        publicKey: 'ew7Q7ippcfXG7lU7V',
-      })
-      e.target.reset();
+    emailjs.sendForm('service_iik776g', 'template_bnf77pn', form.current, {
+      publicKey: 'ew7Q7ippcfXG7lU7V',
+    })
+      .then((result) => {
+        toast.success('Email sent successfully!', {
+          position: "bottom-center",
+        });
+      }, (error) => {
+        toast.error('Failed to send email. Please try again.', {
+          position: "bottom-center",
+        });
+      });
+
+    e.target.reset();
   };
-
-
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,38 +97,41 @@ function Contact() {
         <div className="contact-content">
           <h3 className="contact-title">Write me your project</h3>
           <form ref={form} onSubmit={sendEmail} className="contact-form">
-            <div className={isScrolled?"contact-form-div animate-delay-1 ":"contact-form-div"}>
-              <lable className="contact-form-tag">Name</lable>
+            <div className={isScrolled ? "contact-form-div animate-delay-1" : "contact-form-div"}>
+              <label className="contact-form-tag">Name</label>
               <input
                 type="text"
                 className="contact-form-input"
                 name="name"
                 placeholder="Insert your name"
+                required
               />
             </div>
-            <div className={isScrolled?"contact-form-div animate-delay-2 "  :"contact-form-div"}>
-              <lable className="contact-form-tag">Email</lable>
+            <div className={isScrolled ? "contact-form-div animate-delay-2" : "contact-form-div"}>
+              <label className="contact-form-tag">Email</label>
               <input
                 type="email"
                 className="contact-form-input"
                 name="email"
                 placeholder="Insert your Mail"
+                required
               />
             </div>
-            <div className={isScrolled?"contact-form-div contact-form-area animate-delay-3 ":"contact-form-div "}>
-              <lable className="contact-form-tag">Project</lable>
+            <div className={isScrolled ? "contact-form-div contact-form-area animate-delay-3" : "contact-form-div"}>
+              <label className="contact-form-tag">Project</label>
               <textarea
                 name="project"
                 cols={30}
                 rows={10}
                 className="contact-form-input"
-                placeholder="write your project"
+                placeholder="Write your project"
+                required
               ></textarea>
             </div>
-            <button href="#contact" className="button button-flex">
+            <button type="submit" className="button button-flex">
               Send &nbsp;
               <svg
-                class="button__icon"
+                className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -138,6 +151,7 @@ function Contact() {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }
