@@ -14,6 +14,8 @@
     color: var(--title-color);
     margin: 0 var(--mb-1);
     cursor: pointer;
+    padding: 0 .75rem;
+
 }
 
 .qualification-button:hover {
@@ -26,7 +28,9 @@
 }
 
 .qualification-active {
-    color: var(--title-color-dark);
+    color: var(--container-color);
+    background-color: var(--title-color);
+    border-radius: 1.5rem;
 }
 
 .qualification-sections {
