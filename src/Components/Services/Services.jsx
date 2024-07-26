@@ -14,7 +14,7 @@ function Services() {
         setCheck(true);
         setTimeout(() => {
           setIsScrolled(false);
-        }, 2000);
+        }, 1500);
       }
     };
 
