@@ -29,7 +29,7 @@ function Contact() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 4400) {
+      if (window.scrollY > 4300) {
         setIsScrolled(true);
       }
     };
