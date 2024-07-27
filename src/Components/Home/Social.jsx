@@ -42,7 +42,7 @@ function Social() {
         )}
       </button>
       <a
-        href="https://github.com/KEMO414"
+        href="https://github.com/ahmedkamalyoussef"
         className="home-social-icon"
         target="_blank"
         rel="noopener noreferrer"
