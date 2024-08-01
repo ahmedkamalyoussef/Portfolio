@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 function Frontend() {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const section = useRef();
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1280) {
+      const sectionTop = section.current.offsetTop;
+      if (window.scrollY > sectionTop - 650) {
         setIsScrolled(true);
       }
     };
@@ -18,7 +19,7 @@ function Frontend() {
   }, []);
 
   return (
-    <div className={isScrolled?"skills-content from-left-scroll from-left":"skills-content from-left"}>
+    <div ref={section} className={isScrolled?"skills-content from-left-scroll from-left":"skills-content from-left"}>
       <h3 className="skills-title">Frontend Developer</h3>
       <div className="skills-box">
         <div className="skills-group">

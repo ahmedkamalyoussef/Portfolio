@@ -1,4 +1,4 @@
-  import React, { useState,useEffect } from "react";
+  import React, { useState,useEffect, useRef } from "react";
 import "./Service.css";
 function Services() {
   const [toggleActive, setToggleActive] = useState(0);
@@ -11,7 +11,7 @@ function Services() {
   useEffect(() => {
     const handleScroll = () => {
       const sectionTop = section.current.offsetTop;
-      if (window.scrollY > sectionTop - 200&&check===false) {
+      if (window.scrollY > sectionTop - 350&&check===false) {
         setIsScrolled(true);
         setCheck(true);
         setTimeout(() => {
