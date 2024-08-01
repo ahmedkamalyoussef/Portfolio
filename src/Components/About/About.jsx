@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
-import aboutImge from '../../assets/images/portfolio.png';
+import aboutImage from '../../assets/images/portfolio.png';
 import CV from '../../assets/files/Myresume.pdf';
 import Info from './Info';
 
@@ -10,13 +10,10 @@ function About() {
   useEffect(() => {
     const handleScroll = () => {
       const sectionTop = section.current.offsetTop;
-      if (window.scrollY > sectionTop - 200) {
-        setIsScrolled(true);
-      }
+      setIsScrolled(window.scrollY > sectionTop - 400);
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -24,18 +21,21 @@ function About() {
 
   return (
     <section ref={section} className="about section" id="about">
-      <h2 className="section-title">
-        About Me
-      </h2>
+      <h2 className="section-title">About Me</h2>
       <span className="section-subtitle">My Introduction</span>
       <div className="about-container container grid">
-        <img src={aboutImge} alt="about" className={`about-img ${isScrolled ? 'animate-image' : ''}`} />
+        <img
+          src={aboutImage}
+          alt="about"
+          className={`about-img ${isScrolled ? 'animate-image' : ''}`}
+        />
         <div className="about-data">
-          <Info />
+          <Info isScrolled={isScrolled} />
           <p className="about-description">
             I am a passionate Full Stack Developer with expertise in both front-end and back-end development. My technical skills encompass database management (SQL Server), front-end technologies (HTML5, CSS3, JavaScript, Bootstrap, Tailwind, React, Sass, TypeScript), and .NET backend frameworks (ASP.NET, LINQ, Entity Framework, MVC, API, Blazor). Proficient in multiple programming languages including C#, C++, C, and Python, I have a strong foundation in OOP, algorithms, data structures, and design patterns.
           </p>
-          <a download="" href={CV} className="button button-flex">Download CV &nbsp;
+          <a download="" href={CV} className="button button-flex">
+            Download CV &nbsp;
             <svg
               className="button__icon"
               xmlns="http://www.w3.org/2000/svg"
