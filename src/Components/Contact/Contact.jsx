@@ -32,7 +32,7 @@ function Contact() {
     const handleScroll = () => {
       if (contactSection.current) {
         const sectionTop = contactSection.current.offsetTop;
-        if (window.scrollY > sectionTop - 200) {
+        if (window.scrollY > sectionTop - 250) {
           setIsScrolled(true);
         } else {
           setIsScrolled(false);

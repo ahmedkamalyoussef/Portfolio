@@ -1,7 +1,8 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, useRef } from "react";
 import "./Qualifications.css";
 function Qualifications() {
   const [toggleActive, setToggleActive] = useState(1);
+  const section = useRef();
   const toggleTab = (tab) => {
     setToggleActive(tab);
   };
@@ -9,7 +10,8 @@ function Qualifications() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 2150) {
+      const sectionTop = section.current.offsetTop;
+      if (window.scrollY > sectionTop -250) {
         setIsScrolled(true);
       }
     };
@@ -21,7 +23,7 @@ function Qualifications() {
     };
   }, []);
   return (
-    <section className="qualification section" id="qualification">
+    <section ref={section} className="qualification section" id="qualification">
       <h2 className="section-title">Qualification</h2>
       <span className="section-subtitle">My Personal Journey</span>
       <div className="qualification-container container">

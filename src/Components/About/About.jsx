@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
 import aboutImge from '../../assets/images/portfolio.png';
 import CV from '../../assets/files/Myresume.pdf';
@@ -6,10 +6,11 @@ import Info from './Info';
 
 function About() {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const section = useRef();
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      const sectionTop = section.current.offsetTop;
+      if (window.scrollY > sectionTop - 200) {
         setIsScrolled(true);
       }
     };
@@ -22,7 +23,7 @@ function About() {
   }, []);
 
   return (
-    <section className="about section" id="about">
+    <section ref={section} className="about section" id="about">
       <h2 className="section-title">
         About Me
       </h2>
