@@ -6,6 +6,7 @@ import './Contact.css';
 
 function Contact() {
   const form = useRef();
+  const contactSection = useRef();
   const [isScrolled, setIsScrolled] = useState(false);
 
   const sendEmail = (e) => {
@@ -29,8 +30,13 @@ function Contact() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 4300) {
-        setIsScrolled(true);
+      if (contactSection.current) {
+        const sectionTop = contactSection.current.offsetTop;
+        if (window.scrollY > sectionTop - 200) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
       }
     };
 
@@ -42,15 +48,14 @@ function Contact() {
   }, []);
 
   return (
-    <section className="section contact" id="contact">
+    <section ref={contactSection} className="section contact" id="contact">
       <h2 className="section-title">Get in touch</h2>
       <span className="section-subtitle">Contact Me</span>
       <div className="contact-container container grid">
         <div className="contact-content">
           <h3 className="contact-title">Contact Me</h3>
           <div className="contact-info">
-            {/* ------------------------- */}
-            <div className={isScrolled?"contact-card animate-delay-left-1 ":"contact-card"}>
+            <div className={isScrolled ? "contact-card animate-delay-left-1" : "contact-card"}>
               <i className="bx bx-mail-send contact-card-icon"></i>
               <div className="contact-card-title">Email</div>
               <span className="contact-card-data">
@@ -66,8 +71,7 @@ function Contact() {
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
               </a>
             </div>
-            {/* ------------------------- */}
-            <div className={isScrolled?"contact-card animate-delay-left-2 ":"contact-card"}>
+            <div className={isScrolled ? "contact-card animate-delay-left-2" : "contact-card"}>
               <i className="bx bxl-whatsapp contact-card-icon"></i>
               <div className="contact-card-title">Whatsapp</div>
               <span className="contact-card-data">+201001462439</span>
@@ -81,15 +85,13 @@ function Contact() {
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
               </a>
             </div>
-            {/* ------------------------- */}
-            <div className={isScrolled?"contact-card animate-delay-left-3 ":"contact-card"}>
+            <div className={isScrolled ? "contact-card animate-delay-left-3" : "contact-card"}>
               <i className="bx bxl-messenger contact-card-icon"></i>
               <div className="contact-card-title">Messenger</div>
               <span className="contact-card-data">Ahmed Kamal</span>
               <a href="https://m.me/100028844448220" className="contact-button" target="_blank" rel="noreferrer">
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
-                
               </a>
             </div>
           </div>
