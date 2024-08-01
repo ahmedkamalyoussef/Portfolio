@@ -2,6 +2,7 @@
 import "./Service.css";
 function Services() {
   const [toggleActive, setToggleActive] = useState(0);
+  const section = useRef();
   const toggleTab = (tab) => {
     setToggleActive(tab);
   };
@@ -9,7 +10,8 @@ function Services() {
   const [check, setCheck] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1750&&check===false) {
+      const sectionTop = section.current.offsetTop;
+      if (window.scrollY > sectionTop - 200&&check===false) {
         setIsScrolled(true);
         setCheck(true);
         setTimeout(() => {
@@ -26,7 +28,7 @@ function Services() {
   }, [check]);
 
   return (
-    <section className="section services" id="services">
+    <section ref={section} className="section services" id="services">
       <h2 className="section-title">Services</h2>
       <span className="section-subtitle">What I Offer</span>
       <div className="services-container container grid">
