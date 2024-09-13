@@ -75,7 +75,7 @@ export const projectsData=[
         id:8,
         img:book4u ,
         title:'Book4U',
-        category:'Backend',
+        category:'FullStack',
         gitHub:'https://github.com/KEMO414/Book4U-MVC-Project',
         demo:'http://book4u.runasp.net',
         isHasDemo:true
@@ -99,6 +99,9 @@ export const projectsNav=[
     },
     {
         name:'Frontend'
+    },
+    {
+        name:'FullStack'
     },
     {
         name:'Desktop'
