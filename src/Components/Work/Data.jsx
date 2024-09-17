@@ -1,5 +1,4 @@
 import prolinkApi from '../../assets/images/prolink.png';
-import prolinkReact from '../../assets/images/prolinkblue.png';
 import learningShop from '../../assets/images/learningshop.png';
 import book4u from '../../assets/images/bookShop.png';
 import lms from '../../assets/images/lms.png';
