@@ -44,15 +44,7 @@ export const projectsData=[
         demo:'',
         isHasDemo:false
     },
-    {
-        id:5,
-        img: prolinkReact,
-        title:'ProLink',
-        category: 'Frontend',
-        gitHub:'https://github.com/KEMO414/Prolink-front',
-        demo:'',
-        isHasDemo:false
-    },
+
     {
         id:6,
         img: learningShop,

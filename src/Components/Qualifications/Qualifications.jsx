@@ -80,12 +80,12 @@ function Qualifications() {
                 <span className="qualification-line"></span>
               </div>
               <div>
-                <h3 className={isScrolled?"qualification-title from-right-scroll from-right":"qualification-title from-right"}>
-                  Information Technology Institute(ITI)
-                </h3>
-                <span className={isScrolled?"qualification-subtitle from-right-scroll from-right":"qualification-subtitle from-right"}>ASP.Net</span>
+                <h3 className={isScrolled?"qualification-title from-right-scroll from-right":"qualification-title from-right"}>Tiec</h3>
+                <span className={isScrolled?"qualification-subtitle from-right-scroll from-right":"qualification-subtitle from-right"}>
+                  Basics of programming
+                </span>
                 <div className={isScrolled?"qualification-calendar from-right-scroll from-right":"qualification-calendar from-right"}>
-                  <i className="uil uil-calendar-alt">2023</i>
+                  <i className="uil uil-calendar-alt">Oct 2021 - Oct 2021</i>
                 </div>
               </div>
             </div>
@@ -103,22 +103,7 @@ function Qualifications() {
               </div>
             </div>
             {/* ---------------------------------------------------- */}
-            <div className="qualification-data">
-              <div></div>
-              <div>
-                <span className="qualification-rounder"></span>
-                <span className="qualification-line"></span>
-              </div>
-              <div>
-                <h3 className={isScrolled?"qualification-title from-right-scroll from-right":"qualification-title from-right"}>Tiec</h3>
-                <span className={isScrolled?"qualification-subtitle from-right-scroll from-right":"qualification-subtitle from-right"}>
-                  Basics of programming
-                </span>
-                <div className={isScrolled?"qualification-calendar from-right-scroll from-right":"qualification-calendar from-right"}>
-                  <i className="uil uil-calendar-alt">Oct 2021 - Oct 2021</i>
-                </div>
-              </div>
-            </div>
+            
           </div>
           <div
             className={
