@@ -44,7 +44,6 @@ export const projectsData=[
         demo:'',
         isHasDemo:false
     },
-
     {
         id:6,
         img: learningShop,
