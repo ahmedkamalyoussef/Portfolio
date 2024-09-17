@@ -21,7 +21,7 @@ export const projectsData=[
         img: lms,
         title:'LMS',
         category: 'Backend',
-        gitHub:'https://github.com/KEMO414/LMS',
+        gitHub:'https://github.com/ahmedkamalyoussef/Cairo-code-LMS',
         demo:'',
         isHasDemo:false
     },
