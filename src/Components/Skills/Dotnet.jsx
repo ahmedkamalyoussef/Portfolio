@@ -1,0 +1,46 @@
+import React, { useEffect, useRef, useState } from 'react';
+
+function Dotnet() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const section = useRef();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTop = section.current.offsetTop;
+      if (window.scrollY > sectionTop - 650) {
+        setIsScrolled(true);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div ref={section} className={isScrolled ? "skills-content from-right-scroll from-right" : "skills-content from-right"}>
+      <h3 className="skills-title">.NET Stack</h3>
+      <div className="skills-box">
+
+        <div className="skills-group">
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">ASP.NET Web API</h3></div>
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">ASP.NET MVC</h3></div>
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">Blazor</h3></div>
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">.NET Framework</h3></div>
+        </div>
+
+        <div className="skills-group">
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">Entity Framework</h3></div>
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">LINQ</h3></div>
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">Microsoft SQL Server</h3></div>
+        </div>
+
+        <div className="skills-group">
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">SignalR</h3></div>
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">Object-Oriented Programming (OOP)</h3></div>
+          <div className="skills-data"><i className="bx bx-badge-check"></i><h3 className="skill-name">Design Patterns</h3></div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Dotnet;

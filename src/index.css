@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+/* Base styles */
+body {
+  @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Custom components */
+@layer components {
+  .btn {
+    @apply px-6 py-2.5 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-300 dark:bg-secondary-600 dark:hover:bg-secondary-700;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Dark mode toggle styles */
+.dark .dark\:bg-dark-800 {
+  background-color: #1F2937;
+}
+
+/* Utility classes for dark mode */
+.dark .dark\:text-white {
+  color: #FFFFFF;
+}
+
+.dark .dark\:bg-gray-800 {
+  background-color: #1F2937;
+}
+
+.dark .dark\:bg-gray-900 {
+  background-color: #111827;
+}
+
+.dark .dark\:border-gray-700 {
+  border-color: #374151;
+}
+
+.dark .dark\:text-gray-300 {
+  color: #D1D5DB;
+}
+
+.dark .dark\:text-gray-400 {
+  color: #9CA3AF;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Custom styles for code blocks */
+pre {
+  @apply bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto my-4;
+}
+
+code {
+  @apply font-mono text-sm;
+}
+
+/* Custom styles for links */
+a {
+  @apply text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 transition-colors duration-300;
+}
+
+/* Custom styles for form elements */
+input, textarea, select {
+  @apply w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-300;
+}
+
+/* Custom styles for buttons */
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Custom styles for tooltips */
+[data-tooltip] {
+  @apply relative;
+}
+
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded whitespace-nowrap opacity-0 invisible transition-all duration-300;
+}
+
+[data-tooltip]:hover::after {
+  @apply opacity-100 visible;
+}

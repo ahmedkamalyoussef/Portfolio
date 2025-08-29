@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
-import aboutImage from '../../assets/images/portfolio.png';
-import CV from '../../assets/files/CV.pdf';
+import aboutImage from '../../assets/images/photo_2025-07-07_17-27-08.jpg';
+import CV from '../../assets/files/Ahmed_Kamal_latest.pdf';
 import Info from './Info';
 
 function About() {
@@ -32,7 +32,9 @@ function About() {
         <div className="about-data">
           <Info isScrolled={isScrolled} />
           <p className="about-description">
-            I am a passionate Full Stack Developer with expertise in both front-end and back-end development. My technical skills encompass database management (SQL Server), front-end technologies (HTML5, CSS3, JavaScript, Bootstrap, Tailwind, React, Sass, TypeScript), and .NET backend frameworks (ASP.NET, LINQ, Entity Framework, MVC, API, Blazor). Proficient in multiple programming languages including C#, C++, C, and Python, I have a strong foundation in OOP, algorithms, data structures, and design patterns.
+            I am a passionate Full Stack Developer with expertise in both front-end and back-end development. On the front end, I specialize in React.js and modern UI frameworks such as Tailwind CSS, Bootstrap, Sass, and TypeScript, building responsive and user-friendly interfaces. On the back end, I work with .NET (ASP.NET, LINQ, Entity Framework, MVC, API, Blazor) as well as Node.js with Express, allowing me to develop scalable and efficient server-side applications.
+
+I am proficient in multiple programming languages including C#, JavaScript, C++, C, and Python, with a strong foundation in object-oriented programming (OOP), algorithms, data structures, and design patterns. My diverse skill set enables me to deliver complete end-to-end solutions across the stack.
           </p>
           <a download="" href={CV} className="button button-flex">
             Download CV &nbsp;

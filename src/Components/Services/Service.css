@@ -18,7 +18,7 @@
     border: 1px solid var(--border-color);
     padding: 1.8rem 0 2rem 2.5rem;
     border-radius: 1.25rem;
-    transform: translateX(500%);
+    transform: translateX(600%);
 }
 
 .service-icon {
